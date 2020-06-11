@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/apostila-4.css">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <label>Digite o nome do funcionário</label>
+    <input class="entrada" type="text" id="nomefunc">
+    <label>Digite o salário base em R$</label>
+    <input class="entrada" type="number" id="salbase">
+    <label>Digite os descontos em R$</label>
+    <input class="entrada" type="number" id="descontos">
+    <label>Digite os acréscimos em R$</label>
+    <input class="entrada" type="number" id="acrescimos">
+
+    <input type="button" id="resultado" onclick="resulcalculo()" value="Calcule o salário líquido">
+
+    <label class="saida">Nome do Funcionário:</label>
+    <input class="saida" type="text" id="resulnome" value="" disabled>
+    <label class="saida">Salário Liquído em R$:</label>
+    <input class="saida" type="text" id="resulsalario" value="" disabled>
+
+  </form>
+  <script src="/scripts/apostila-4.js"></script>
+</body>
+</html>

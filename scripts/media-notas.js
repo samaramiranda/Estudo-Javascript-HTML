@@ -1,3 +1,4 @@
+
 function somanotas() {
   var nota1 = parseFloat(document.getElementById("nota1").value);
   var nota2 = parseFloat(document.getElementById("nota2").value);
@@ -36,4 +37,5 @@ function situacaoaluno() {
       .setAttribute("value", "Reprovado :(")
   }
 }
+
 
