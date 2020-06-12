@@ -8,6 +8,8 @@ function resulcalculo() {
     .setAttribute("value", nome)
 
   const salarioliq = parseFloat(salariobase - descont + acresc)
+
+
   document.getElementById("resulsalario")
-    .setAttribute("value", salarioliq)
+    .setAttribute("value",   salarioliq.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    )
 }
