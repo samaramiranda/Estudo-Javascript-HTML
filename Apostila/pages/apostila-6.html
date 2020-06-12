@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Apostila/styles/apostila-6.css">
+  <title>Exercício N-6 Apostila</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <div class="entrada">
+      <label>Insira o valor do aluguel por hora:</label>
+      <input type="number" id="aluguelhora">
+      <label>Insira a qte de horas jogadas:</label>
+      <input type="number" id="horasjog">
+      <label>Insira a qte de pessoas:</label>
+      <input type="number" id="qtepessoas">
+
+      <input type="button" id="resultado" onclick="calculevalfinal()" value="Calcule o valor final" >
+    </div>
+
+    <div class="saida">
+      <label>O valor total da conta em R$ é:</label>
+      <input type="number" id="valtotal" value="" disabled>
+      <label>O valor da conta de cada pessoa em R$ é:</label>
+      <input type="number" id="valindividual" value="" disabled>
+    </div>
+
+  </form>
+
+  <script src="/Apostila/scripts/apostila-6.js"></script>
+</body>
+</html>
