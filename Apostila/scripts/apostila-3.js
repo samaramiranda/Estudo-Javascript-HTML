@@ -29,13 +29,12 @@ function situacaoaluno() {
 
   var soma = parseFloat(nota1 + nota2 + nota3)
 
-  if(soma > 50){
+  soma > 50 ?
     document.getElementById("situacao")
       .setAttribute("value", "Aprovado :D")
-  } else {
-    document.getElementById("situacao")
+  : document.getElementById("situacao")
       .setAttribute("value", "Reprovado :(")
-  }
+  
 }
 
 
