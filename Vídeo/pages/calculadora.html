@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Vídeo/styles/calculadora.css">
+  <title>Calculadora</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <h1>Calculadora</h1>
+    <div class="entrada">
+      <label>Digite o primeiro número:</label>
+      <input type="number" id="num1">
+      <label>Digite o segundo número:</label>
+      <input type="number" id="num2"> 
+    </div>
+    <div class="operacoes">
+      <div class="soma">
+        <input type="button" value="Somar"  onclick="soma()"> = 
+        <input type="text" id="resulsoma" value="" disabled>
+      </div>
+      <div class="subtracao">
+        <input type="button" value="Subtrair" onclick="subtracao()"> = 
+        <input type="text" id="resulsubtracao" value="" disabled>
+      </div>
+      <div class="multiplicacao">
+        <input type="button" value="Multiplicar" onclick="multiplicacaonum()"> = 
+        <input type="text" id="resulmultiplicacao" value="" disabled>
+      </div>
+      <div class="divisaoint">
+        <input type="button" value="Dividir em inteiro" onclick="divisaointeiro()"> = 
+        <input type="text" id="resuldivisaoint" value="" disabled>
+      </div>
+      <div class="divisaodec">
+        <input type="button" value="Dividir em decimal" onclick="divisaodecimal()"> = 
+        <input type="text" id="resuldivisaodec" value="" disabled>
+      </div>
+    </div>
+  </form>
+
+  <script src="/Vídeo/scripts/calculadora.js"></script>
+</body>
+</html>

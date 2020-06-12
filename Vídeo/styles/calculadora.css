@@ -1,0 +1,68 @@
+form h1 {
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(41, 0, 153);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form div.entrada {
+  margin: 30px 150px 30px 150px;
+  background-color: #e9f5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 40px;
+}
+
+form div.entrada input {
+  margin: 3px 0 20px 0;
+  border: none;
+  padding: 10px;
+  background-color: #ddddff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #22009c;
+  border-radius: 8px;
+}
+
+form div.operacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 150px 30px 150px;
+  background-color: #dae1ff;
+  padding: 20px;
+}
+
+form div.operacoes input[type=button] {
+  border-radius: 8px;
+  border: none;
+  padding:6px;
+  background-color: #3800a0;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px 10px 0;
+}
+
+form div.operacoes input[type=button]:hover {
+  background-color: #260269;
+  padding: 8px;
+  cursor: pointer;
+}
+
+form div.operacoes input[type=text] {
+  border-radius: 8px;
+  margin: 0;
+  border: none;
+  padding: 6px;
+  background-color: #ffffff;
+  margin: 10px 0px 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
