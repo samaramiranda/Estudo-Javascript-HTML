@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #1a1a9c;
+      color: white;
+      font: normal 18pt arial;
+    }
+  </style>
+  <title>Ex005</title>
+</head>
+<body>
+  <h1>Iniciando DOM</h1>
+  <p>Aqui vai o resultado</p>
+  <p>Aprendendo <strong>DOM</strong> em javascript</p>
+  <div id="msg" name="msgname" class="msgclass">Clique aqui</div>
+
+  <script>
+    var corpo = document.body
+    //selecionando pelo nome da tag
+    var p1 = document.getElementsByTagName("p")[1]
+    document.write(p1.innerText)
+    p1.style.color = "blue"
+    corpo.style.background = "black"
+    document.write(p1.innerHTML)
+
+    //selecionando pelo ID da tag
+    var d = document.getElementById("msg")
+    d.style.background = "green"
+    d.innerText = "Alterando pelo javascript..."
+    // ou document.getElementById("msg").innerText = "Alterando pelo javascript..."
+
+    //selecionando pelo nome atribuido a tag
+    var di = document.getElementsByName("msgname")
+    d.style.background = "red"
+    d.innerText = "Alterando pelo name no js"
+
+    //selecionando pela classe
+    var dic = document.getElementsByClassName("msgclass")
+    d.style.background = "yellow"
+    d.innerText = "Alterando pela class no js"
+
+    //selecionando por seletor
+    var dselec = document.querySelector("div#msg")
+    d.style.background = "white"
+    d.style.color = "black"
+    d.innerText = "Alterando pelo seletor no js"
+
+  </script>
+</body>
+</html>
