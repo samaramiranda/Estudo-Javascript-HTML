@@ -1,14 +1,18 @@
 
+document.getElementById("somar")
+  .addEventListener("click", soma)
 function soma() {
   var numero1 = Number(document.getElementById("num1").value)
   var numero2 = Number(document.getElementById("num2").value)
-  
-  var resultadosoma = numero1 + numero2
+
+  var resultadosoma = Number(numero1 + numero2)
 
   document.getElementById("resulsoma")
     .setAttribute("value", resultadosoma)
 }
 
+document.getElementById("subtrair")
+  .addEventListener("click", subtracao)
 function subtracao()  {
   var numero1 = Number(document.getElementById("num1").value)
   var numero2 = Number(document.getElementById("num2").value)
@@ -19,6 +23,8 @@ function subtracao()  {
     .setAttribute("value", resultadosubtracao)
 }
 
+document.getElementById("multiplicar")
+  .addEventListener("click", multiplicacaonum)
 function multiplicacaonum() {
   var numero1 = Number(document.getElementById("num1").value)
   var numero2 = Number(document.getElementById("num2").value)
@@ -29,6 +35,8 @@ function multiplicacaonum() {
     .setAttribute("value", resultadomultiplicao)
 }
 
+document.getElementById("dividirinteiro")
+  .addEventListener("click", divisaointeiro)
 function divisaointeiro() {
   var numero1 = Number(document.getElementById("num1").value)
   var numero2 = Number(document.getElementById("num2").value)
@@ -39,6 +47,8 @@ function divisaointeiro() {
     .setAttribute("value", resultadodivinteiro)
 }
 
+document.getElementById("dividirdecimal")
+  .addEventListener("click", divisaodecimal)
 function divisaodecimal() {
   var numero1 = Number(document.getElementById("num1").value)
   var numero2 = Number(document.getElementById("num2").value)
