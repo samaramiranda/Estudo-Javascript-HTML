@@ -1,0 +1,53 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  color: rgb(155, 24, 1);
+  font-weight: bold;
+}
+
+div#entrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 238, 237);
+  padding: 30px;
+  width: 300px;
+}
+
+div#entrada label {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px 0px 2px 0px;
+}
+
+div#entrada input {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(255, 165, 149);
+}
+
+div#entrada button {
+  background-color: rgb(196, 35, 7);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 6px;
+  border: none;
+  border-radius: 8px;
+}
+
+.resultado {
+  padding: 20px;
+  background-color: rgb(255, 165, 149);
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
