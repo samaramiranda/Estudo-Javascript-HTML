@@ -1,0 +1,34 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 2px 0;
+}
+
+input {
+  font-size: 16px;
+  background-color: rgb(216, 241, 241);
+  border: none;
+  padding: 5px;
+}
+
+button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: teal;
+  color: white;
+  margin: 20px 0 20px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+div#resultado {
+  font-size: 18px;
+  font-weight: bold;
+}
