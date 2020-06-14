@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(3, 95, 95);
+    }
+    label {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    input {
+      font-size: 16px;
+    }
+    button {
+      background-color: rgb(1, 119, 119);
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+    }
+    div {
+      margin-top: 20px;
+    }
+  </style>
+  <title>Exercício 9 - Apostila</title>
+</head>
+<body>
+  <h1>Nacionalidade: </h1>
+  <label>Digite seu País: </label>
+  <input type="text" id="pais">
+  <button onclick="verificar()">Verificar</button>
+  <div id="resultado"></div>
+
+  <script>
+    function verificar() {
+      var paisdig = document.getElementById("pais").value 
+      var resul = document.getElementById("resultado")
+
+      if (paisdig == "Brasil"){
+        resul.innerHTML = "Você é brasileiro!"
+      } else {
+        resul.innerHTML = "Você é estrangeiro!"
+      }
+    }
+  </script>
+</body>
+</html>
