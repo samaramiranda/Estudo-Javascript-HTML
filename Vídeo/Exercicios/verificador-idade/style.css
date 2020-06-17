@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(31, 95, 99);
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin: 30px;
+  text-align: center;
+}
+
+section {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.842);
+}
+
+div#dados label {
+  font-size: 18px;
+}
+
+div#dados input {
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid rgb(31, 95, 99);
+}
+
+button {
+  padding: 7px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(31, 95, 99);
+  color: white;
+}
+
+div#resultado {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#resultado label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+div#resultado img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
