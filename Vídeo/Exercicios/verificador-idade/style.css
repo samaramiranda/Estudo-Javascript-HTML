@@ -41,22 +41,21 @@ button {
   color: white;
 }
 
-div#resultado {
+.resultado {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-div#resultado label {
+.resultado label {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-div#resultado img {
-  width: 200px;
+.resultado img {
+  width: 150px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 25%;
 }
-
