@@ -8,45 +8,38 @@ function verificar() {
 
   divresul.classList.toggle("resultado")
 
-  if (nasc == 0 || nasc > ano){
+  if (nasc == 0 || nasc > ano) {
     alert("ERRO! Verifique os dados e tente novamente")
-  }else {
+  } else {
     var idade = ano - nasc
-    var sexo = document.getElementsByName("radsex")
     var genero = ""
-    if(sexo[0].checked){
-      genero = "Homem"
-      if(idade >= 0 && idade <= 10 ){
-        txtresul.innerHTML = `Detectamos criança de ${idade} anos`
+    var sexo = document.getElementsByName("radsex")
+    if (sexo[0].checked) {
+      genero = "homem"
+      if (idade >= 0 && idade <= 12) {
         imgresul.src = "../verificador-idade/assets/mascrianca.jpg"
-      }else if(idade <= 21){
-        txtresul.innerHTML = `Detectamos homem jovem de ${idade} anos`
+      } else if (idade <= 21) {
         imgresul.src = "../verificador-idade/assets/homemjovem.jpg"
-      }else if(idade <= 50){
-        txtresul.innerHTML = `Detectamos homem adulto de ${idade} anos`
+      } else if (idade <= 50) {
         imgresul.src = "../verificador-idade/assets/homemadulto.jpg"
-      }else {
-        txtresul.innerHTML = `Detectamos homem idoso de ${idade} anos`
+      } else {
         imgresul.src = "../verificador-idade/assets/homemidoso.jpg"
 
       }
-    }else if (sexo[1].checked){
-      genero = "Mulher"
-      if(idade >= 0 && idade <= 10 ){
-        txtresul.innerHTML = `Detectamos criança de ${idade} anos`
+    } else if (sexo[1].checked) {
+      genero = "mulher"
+      if (idade >= 0 && idade <= 12) {
         imgresul.src = "../verificador-idade/assets/femcrianca.jpg"
-      }else if(idade <= 21){
-        txtresul.innerHTML = `Detectamos mulher jovem de ${idade} anos`
+      } else if (idade <= 21) {
         imgresul.src = "../verificador-idade/assets/mulherjovem.jpg"
-      }else if(idade <= 50){
-        txtresul.innerHTML = `Detectamos mulher adulta de ${idade} anos`
+      } else if (idade <= 50) {
         imgresul.src = "../verificador-idade/assets/mulheradulta.jpg"
-      }else {
-        txtresul.innerHTML = `Detectamos mulher idosa de ${idade} anos`
+      } else {
         imgresul.src = "../verificador-idade/assets/mulheridosa.jpg"
       }
     }
-
+    txtresul.innerHTML = `Detectamos ${genero} com ${idade} anos`
+    imgresul
   }
 }
 
