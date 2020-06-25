@@ -1,9 +1,3 @@
-header {
-  font-size: 50px;
-  margin: 30px 0 20px 0;
-  font-weight: bold;
-}
-
 body {
   background-color: rgb(170, 76, 211);
   font-size: 18pt;
@@ -13,6 +7,9 @@ body {
 header {
   color: white;
   text-align: center;
+  font-size: 50px;
+  margin: 30px 0 20px 0;
+  font-weight: bold;
 }
 
 section {
