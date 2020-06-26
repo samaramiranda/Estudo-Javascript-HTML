@@ -21,6 +21,5 @@ function tabuada (){
 
   }else{
     alert("Digite um número!")
-    resul.innerHTML = "Digite um número acima"
   }
 }
