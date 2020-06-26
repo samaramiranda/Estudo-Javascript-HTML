@@ -1,14 +1,24 @@
 function tabuada (){
-  var numero = Number(document.getElementById("num").value)
+  var numerotxt = document.getElementById("num")
   var resul = document.getElementById("resultado")
-  var cont = 0;
 
-  if (numero != ""){
-    resul.innerHTML = `Tabuada de ${numero} <br>`
+  if (numerotxt.value.length != 0){
+    var numero = Number(numerotxt.value)
+    var cont = 0;
+    resul.innerHTML = ""
     while (cont <= 10){
-      resul.innerHTML += `${numero} x ${cont} = ${numero * cont} <br>`
+      var item = document.createElement("option")
+      item.text += `${numero} x ${cont} = ${numero * cont}`
+      resul.appendChild(item)
       cont++
     }
+
+    // for (cont; cont <= 10; cont++){
+    //   var item = document.createElement("option")
+    //   item.text += `${numero} x ${cont} = ${numero * cont}`
+    //   resul.appendChild(item)
+    // }
+
   }else{
     alert("Digite um número!")
     resul.innerHTML = "Digite um número acima"
