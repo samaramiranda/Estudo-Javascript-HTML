@@ -1,0 +1,39 @@
+body{
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  font-size: 30px;
+  color: rgb(35, 0, 163);
+}
+
+div#dados{
+  width: 200px;
+  align-items: center;
+}
+
+input {
+  border: none;
+  background-color: rgb(195, 195, 204);
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 5px;
+  border: none;
+  background-color: rgb(35, 0, 163);
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  padding: 7px;
+}
