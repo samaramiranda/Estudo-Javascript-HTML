@@ -21,9 +21,9 @@ console.log(`Vetor após adicionar valor 7 na última posição: ${num}`)
 
 //buscar valor dentro do vetor
 let pos = num.indexOf(8)
-if(pos == -1){//caso o valor não exista no vetor retorna -1
+if (pos == -1) {//caso o valor não exista no vetor retorna -1
   console.log("O valor buscado não existe no vetor")
-}else {
+} else {
   console.log(`O valor 8 está na posição ${pos} do vetor`)
 }
 
