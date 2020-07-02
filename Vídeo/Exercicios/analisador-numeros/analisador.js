@@ -1,5 +1,6 @@
 var valores = []
 var select = document.getElementById("selectresul")
+var resul = document.getElementById("resultado")
 
 function adicionar() {
   let numero = Number(document.getElementById("num").value)
@@ -14,15 +15,13 @@ function adicionar() {
       let item = document.createElement("option")
       item.text = `Valor ${numero} adicionado.`
       select.appendChild(item)
+      resul.innerHTML = ""
     }
   }
-  console.log(valores)
 }
 
 function finalizar() {
-  let resul = document.getElementById("resultado")
-
-  if (select.length == "") {
+  if (select.length == 0) {
     alert("Lista vazia! Adicione um número.")
   } else {
     let somaresul = 0;
@@ -45,5 +44,4 @@ function finalizar() {
       Somando todos os valores, temos ${totalsoma}. <br>
       A média dos valores digitados é ${media}.`
   }
-
 }
