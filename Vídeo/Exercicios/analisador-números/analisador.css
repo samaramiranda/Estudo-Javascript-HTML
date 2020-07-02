@@ -48,10 +48,17 @@ select{
   width: 170px;
   margin-top: 20px;
   height: 130px;
+  border-radius: 4px;
+  border: 1px solid green;
 }
 
 button#final{
   margin-top: 5px;
+}
+
+div#resultado {
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 footer{
