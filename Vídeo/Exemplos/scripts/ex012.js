@@ -3,10 +3,10 @@ var hora = agora.getHours()
 var minutos = agora.getMinutes()
 console.log(`Agora são ${hora} horas e ${minutos} minutos`)
 
-if (hora < 12){
+if (hora < 12) {
   console.log("Bom dia")
-}else if (hora <= 18){
+} else if (hora <= 18) {
   console.log("Boa tarde")
-}else {
+} else {
   console.log("Boa noite")
 }
