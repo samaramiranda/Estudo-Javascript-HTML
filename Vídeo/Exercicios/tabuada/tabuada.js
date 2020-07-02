@@ -1,12 +1,12 @@
-function tabuada (){
+function tabuada() {
   var numerotxt = document.getElementById("num")
   var resul = document.getElementById("resultado")
 
-  if (numerotxt.value.length != 0){
+  if (numerotxt.value.length != 0) {
     var numero = Number(numerotxt.value)
     var cont = 0;
     resul.innerHTML = ""
-    while (cont <= 10){
+    while (cont <= 10) {
       var item = document.createElement("option")
       item.text += `${numero} x ${cont} = ${numero * cont}`
       resul.appendChild(item)
@@ -19,7 +19,7 @@ function tabuada (){
     //   resul.appendChild(item)
     // }
 
-  }else{
+  } else {
     alert("Digite um número!")
   }
 }
