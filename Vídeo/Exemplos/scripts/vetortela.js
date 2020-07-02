@@ -8,6 +8,6 @@ valores.sort()
 
 
 //for simplificado para ARRAY e OBJETOS
-for(let pos in valores){//para cada posição na variável "valores" faça:
+for (let pos in valores) {//para cada posição na variável "valores" faça:
   console.log(`A posição ${pos} tem o valor: ${valores[pos]}`)
 }
