@@ -42,4 +42,3 @@ function verificar() {
     imgresul
   }
 }
-

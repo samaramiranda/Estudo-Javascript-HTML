@@ -7,8 +7,8 @@ function loading() {
   var hora = data.getHours()
   var minuto = data.getMinutes()
   var seg = data.getSeconds()
-  
-  switch(dia) {
+
+  switch (dia) {
     case 0:
       msgdia.innerHTML = "Segunda-feira"
       break
@@ -18,31 +18,31 @@ function loading() {
     case 2:
       msgdia.innerHTML = "Terça-feira"
       break
-    case 3: 
+    case 3:
       msgdia.innerHTML = "Quarta-feira"
       break
-    case 4: 
+    case 4:
       msgdia.innerHTML = "Quinta-feira"
       break
     case 5:
       msgdia.innerHTML = "Sexta-feira"
       break
-    case 6: 
+    case 6:
       msgdia.innerHTML = "Sábado"
       break
-    case 7: 
+    case 7:
       msgdia.innerHTML = "Domingo"
   }
 
   msg.innerHTML = `${hora}:${minuto}`
 
-  if (hora >= 00 && hora < 12){
+  if (hora >= 00 && hora < 12) {
     img.src = "../relogio/assets/manha.jpg"
     document.body.style.background = "#FFDEAD"
-  } else if (hora >= 12 && hora <= 18){
+  } else if (hora >= 12 && hora <= 18) {
     img.src = "../relogio/assets/tarde.jpg"
     document.body.style.background = "#d99789"
-  }else{
+  } else {
     img.src = "../relogio/assets/noite.jpg"
     document.body.style.background = "#808080"
   }
