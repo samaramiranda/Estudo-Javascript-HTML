@@ -1,3 +1,5 @@
+//OBJETOS PERSONALIZADOS II
+
 let person = {
   name: "Samara",
   age: 20,
