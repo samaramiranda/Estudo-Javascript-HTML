@@ -9,11 +9,12 @@ let arrFinal = arr1.concat(arr2)
 console.log(arrFinal)
 
 
-//Every
-//percorre o array verificando se os elementos são de um tipo, no caso do tipo number
+//Every (verifica todos os itens do array)
+//percorre o array fazendo a verificação da função para todos os itens e retornando "true" ou "false"
 let everyX = arrFinal.every(
-  function verifyElements(elem, ind, obj) {
-    return (typeof elem == "number")
+  function verifyElements(elem, ind, obj) {//passa apenas os parâmetros que vai utilizar
+    return (typeof elem == "number")//verifica se todos os itens são do tipo "number"
+    //return item < 5 //Se todos os itens do array foram menores que 5 retorna "true"
   }
 )
 console.log(everyX) //retorna "false" porque tenho string no meio
@@ -40,8 +41,8 @@ console.log(filterY)
 //ForEach
 //Percorre todo o array e exibe os dados que solicitei, no caso o índice
 let data = ""
-let forEachX = arrFinal.forEach(
-  function verifyElements(elem, ind, obj) {
+let forEachX = arrFinal.forEach(//a função passa por cada item do array
+  function verifyElements(elem, ind, obj) {//passa apenas os parâmetros que vai utilizar
     data += `Índice ${ind} : ${elem} \n`
   }
 )
@@ -73,8 +74,8 @@ console.log(data3)
 //IndexOf
 //Busca um certo elemento e exibe a posição onde ele se encontra (retorna -1 se não existir)
 let indexOfX = arrFinal.indexOf("c")
-if(indexOfX == -1){
+if (indexOfX == -1) {
   console.log("Esse dado não existe")
-}else{
+} else {
   console.log(indexOfX)
 }
