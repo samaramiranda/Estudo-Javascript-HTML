@@ -18,8 +18,8 @@ let joinX = arrFinal.join(" - ") //o parametro é o separador entre os elementos
 console.log(joinX)
 
 
-//Map
-//Percorre todos os dados do array modificando como quiser, nesse caso multiplica cada elemento por 2 
+//Map (retorna um novo array e não modifica o original)
+//Percorre todos os dados do array executando a function, nesse caso multiplica cada elemento por 2 
 let mapX = arrFinal.map(
   function verifyElements(elem, ind, obj) {
     return elem * 2;
@@ -49,11 +49,11 @@ mapFinal.pop()
 console.log(mapFinal)
 
 
-//Some
+//Some (se pelo ou menos um elemento for "true" ele retorna true)
 //Percorre o array e verifica se a condição existe, retorna true ou false
 let someX = arrFinal.some(
   function verifyElement(elem, ind, obj) {
-    return (elem === 3)
+    return (elem === 3)//se existir um elemento = 3 retorna "true"
   }
 )
 console.log(someX)
