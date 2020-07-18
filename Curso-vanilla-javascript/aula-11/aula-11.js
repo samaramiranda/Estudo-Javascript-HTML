@@ -20,7 +20,7 @@ let everyX = arrFinal.every(
 console.log(everyX) //retorna "false" porque tenho string no meio
 
 
-//Filter
+//Filter (retorna um novo array com os itens filtrados)
 //Filtra os elementos de acordo com a condição que passei, no caso elementos > 3
 let filterX = arrFinal.filter(
   function verifyElements(elem, ind, obj) {
@@ -36,6 +36,26 @@ let filterY = arrFinal.filter(
   }
 )
 console.log(filterY)
+
+//Map + filter 
+var arr = [1 ,2, 3, 4, 5]
+var map = arr.map(function(elem){
+  return elem + 10 //passa por todos os elementos do arr adicionando 10 em cada um
+})
+//filtra os elementos maiores que 13 do array retornado pelo map e retorn outro array
+var filter = arr.filter(function(elem){
+  return item > 13
+})
+console.log(filter)
+
+//OU encadeados
+var arr = [1 ,2, 3, 4, 5]
+var map = arr.map(function(elem){
+  return elem + 10 //passa por todos os elementos do arr adicionando 10 em cada um
+}).filter(function(elem){
+  return item > 13
+})
+console.log(map)
 
 
 //ForEach
