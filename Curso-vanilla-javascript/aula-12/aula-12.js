@@ -8,7 +8,7 @@ console.log(arrFinal)
 
 //Last Index Of
 //Funciona igual o indexOf percorrendo o array, mas pega a posição da ultima ocorrência do elemento no array
-let lastIndexOfX = arrFinal.lastIndexOf("a")
+let lastIndexOfX = arrFinal.lastIndexOf("a", 2)//o segundo parâmetro antes de qual índice começa a buscar (no caso do 2 pra trás)
 console.log(lastIndexOfX)
 
 
@@ -63,3 +63,9 @@ console.log(someX)
 //Reverte a ordem do array, modifica o array original e cria um novo
 let reverseX = arrFinal.reverse()
 console.log(reverseX)
+
+
+//IsArray
+//verifica se é um array de verdade ou array de objeto
+let arr = ["s", "a", "m"]
+console.log(Array.isArray(arr))
