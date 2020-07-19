@@ -38,21 +38,21 @@ let filterY = arrFinal.filter(
 console.log(filterY)
 
 //Map + filter 
-var arr = [1 ,2, 3, 4, 5]
-var map = arr.map(function(elem){
+var arr = [1, 2, 3, 4, 5]
+var map = arr.map(function (elem) {
   return elem + 10 //passa por todos os elementos do arr adicionando 10 em cada um
 })
 //filtra os elementos maiores que 13 do array retornado pelo map e retorn outro array
-var filter = arr.filter(function(elem){
+var filter = arr.filter(function (elem) {
   return item > 13
 })
 console.log(filter)
 
 //OU encadeados
-var arr = [1 ,2, 3, 4, 5]
-var map = arr.map(function(elem){
+var arr = [1, 2, 3, 4, 5]
+var map = arr.map(function (elem) {
   return elem + 10 //passa por todos os elementos do arr adicionando 10 em cada um
-}).filter(function(elem){
+}).filter(function (elem) {
   return item > 13
 })
 console.log(map)
@@ -93,9 +93,10 @@ console.log(data3)
 
 //IndexOf
 //Busca um certo elemento e exibe a posição onde ele se encontra (retorna -1 se não existir)
-let indexOfX = arrFinal.indexOf("c")
+let indexOfX = arrFinal.indexOf("c", 2)//segundo parâmetro define a partir de qual índice procurar
 if (indexOfX == -1) {
   console.log("Esse dado não existe")
 } else {
   console.log(indexOfX)
 }
+//arrFinal.indexOf("c", 2) > -1)//retorna true ou false se o valor existe ou não
