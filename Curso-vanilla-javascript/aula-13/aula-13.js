@@ -6,14 +6,13 @@ let arr2 = ["a", "b", "a"]
 let arrFinal = arr1.concat(arr2)
 console.log(arrFinal)
 
-//Reduce
-//Percorre todo o array fazendo operações entre o elemento atual e o próximo elemento
-//ReduceRight funciona igual o reduce, apenas invertendo ordem
+//Reduce (não modifica o array original e nem retorna array)
+//Percorre todo o array fazendo operações entre o valor acumulado e o valor atual
+//ReduceRight funciona igual o reduce, mas da direita para esquerda (invertido)
 let reduceX = arrFinal.reduce(
-  function verifyElements(v1, v2, ind, arr) {
-    return v1 + v2 //soma o atual com o próximo
-  }
-)
+  function verifyElements(acumulado, atual, ind, arr) {
+    return acumulado + atual //soma o atual com o próximo
+  }, 0)//0 está sendo atríbuido ao valor acumulado (não é obrigatório)
 console.log(reduceX)
 
 
