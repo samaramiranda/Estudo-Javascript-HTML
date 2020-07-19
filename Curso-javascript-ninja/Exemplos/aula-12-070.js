@@ -7,6 +7,17 @@ var obj2 = Object.create(obj)
 obj2.x = 10
 var obj3 = Object.create(obj2)
 
+var objteste = {
+  name: "teste"
+}
+
+//"objteste2" recebe a referencia de memória do objteste, então são iguais
+var objteste2 = objteste
+if(objteste === objteste2){
+  console.log(`Objetos iguais`)
+  console.log(objteste2)
+}
+
 
 //OBJECT.KEYS
 //Retorna todas as propriedades do objeto
