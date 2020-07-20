@@ -17,9 +17,9 @@ Crie um arquivo chamado index.html e adicione esse script ao HTML.
       - "[NAME] [LASTNAME]"
     - `getAge` - que deverá retornar a idade (age);
     - `addAge` - esse método não deverá ter nenhum parâmetro, mas ao invocá-lo
-    iremos passar um único argumento, que é a quantidade de anos que devem ser
-    adicionados à idade original (age). Esse método deverá retornar o objeto
-    que será instanciado.
+  iremos passar um único argumento, que é a quantidade de anos que devem ser
+  adicionados à idade original (age). Esse método deverá retornar o objeto
+  que será instanciado.
   */
   function Person(name, lastName, age) {
     this.name = name
@@ -43,22 +43,19 @@ Crie um arquivo chamado index.html e adicione esse script ao HTML.
   parâmetros corretamente para o construtor para criar as novas pessoas.
   Mostre as 3 novas pessoas criadas no console (Um console.log por pessoa).
   */
-  let samara = new Person("Samara", "Miranda", 21)
-  let samuel = new Person("Samuel", "Paula", 23)
-  let lorena = new Person("Lorena", "Lemes", 21)
-
+  var samara = new Person("samara", "miranda", 21)
+  var lorena = new Person("lorena", "lemes", 20)
+  var samuel = new Person("samuel", "paula", 23)
   console.log('Novas pessoas criadas à partir de Person:');
   console.log(samara)
-  console.log(samuel)
   console.log(lorena)
+  console.log(samuel)
 
-  /*
-  Mostre no console o nome completo de cada pessoa.
-  */
+  //Mostre no console o nome completo de cada pessoa.
   console.log('\nNomes das pessoas:');
-  console.log(samara.name)
-  console.log(samuel.name)
-  console.log(lorena.name)
+  console.log(samara.getFullName())
+  console.log(lorena.getFullName())
+  console.log(samara.getFullName())
 
   /*
   Mostre no console as idades de cada pessoa, com a frase:
@@ -66,16 +63,15 @@ Crie um arquivo chamado index.html e adicione esse script ao HTML.
   */
   console.log('\nIdade das pessoas:');
   console.log(`${samara.getFullName()} tem ${samara.getAge()} anos`)
-  console.log(`${samuel.getFullName()} tem ${samuel.getAge()} anos`)
-  console.log(`${lorena.getFullName()} tem ${lorena.getAge()} anos`)
+  console.log(`${lorena.getFullName()} tem ${samara.getAge()} anos`)
+  console.log(`${samuel.getFullName()} tem ${samara.getAge()} anos`)
 
   /*
   Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
   cada um. A frase deverá ser no formato:
   - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
   */
-  console.log( '\nNova idade das pessoas:' );
-  console.log(`${samara.getFullName()} agora tem ${samara.addAge(2).getAge()} anos`)
-  console.log(`${samuel.getFullName()} agora tem ${samuel.addAge(1).getAge()} anos`)
-
-}())
+  console.log('\nNova idade das pessoas:');
+  console.log(`${samara.getFullName()} agora tem ${samara.addAge(3).getAge()} anos`)
+  console.log(`${samuel.getFullName()} agora tem ${samuel.addAge(-4).getAge()} anos`)
+})()
