@@ -1,3 +1,5 @@
+//O OBJETO THIS
+
 (function () {
   function myFunction() {
     return this//this dentro da função referencia o objeto window
