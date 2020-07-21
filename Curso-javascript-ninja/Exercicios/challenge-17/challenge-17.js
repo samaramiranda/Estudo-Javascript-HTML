@@ -73,5 +73,49 @@
   "O mês de [NOME DO MÊS] é representado pelo número [NÚMERO DO MÊS]."
   */
   console.log('\nMeses representados por números:');
-  
+  function getMonthNumber(mes) {
+    let listaMes = {
+      janeiro: "01",
+      fevereiro: "02",
+      "março": "03",
+      abril: "04",
+      maio: "05",
+      junho: "06",
+      julho: "07",
+      agosto: "08",
+      setembro: "09",
+      outubro: "10",
+      novembro: "11",
+      dezembro: "12"
+    }
+    return listaMes[mes]
+  }
+  console.log(`O mês de março é representado pelo número ${getMonthNumber("março")}.`)
+  console.log(`O mês de setembro é representado pelo número ${getMonthNumber("setembro")}.`)
+  console.log(`O mês de dezembro é representado pelo número ${getMonthNumber("dezembro")}.`)
+
+  /*
+  Agora, declare uma variável chamada `regexDate` que irá receber a expressão
+  regular que irá fazer o match com as datas. Crie grupos de captura para o
+  dia, o mês e o ano. Para os meses, você pode fazer o match somente com os
+  meses que estão no texto, não precisa adicionar todos.
+  Com o que vimos até agora, você consegue fazer :D
+  Mostre a regex no console.
+  */
+  console.log('\nRegex que vai fazer o match com as datas do texto:');
+  let regexDate = /(\d\d) de (junho|julho) de (\d\d\d\d)/g
+  console.log(regexDate)
+
+  /*
+  Agora crie a função que irá fazer o replace dos dados. A função será chamada
+  de `replaceDate`. Ela deve retornar a data no formato:
+  "[DIA]/[MÊS]/[ANO]"
+  Após criar a função, faça o replace das datas no texto, mostrando no
+  console o resultado.
+  */
+  console.log('\nReplace de datas:');
+  function replaceDate(regex, day, month, year) {
+    return `${day}/${getMonthNumber(month)}/${year}`
+  }
+  console.log(text.replace(regexDate, replaceDate))
 })()
