@@ -1,0 +1,13 @@
+.menu {
+  display: none;
+}
+
+#btn {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
