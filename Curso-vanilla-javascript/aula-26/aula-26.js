@@ -8,6 +8,9 @@
   let txtArea = document.querySelector("#txtArea")
   let lengthArea = document.querySelector("#lengthArea")
   let check = document.querySelector("#check")
+  let radio = document.getElementsByName("gender")
+  let sel = document.querySelector("#sel")
+  let btn = document.querySelector("#btn")
 
   form1.action = "teste.php"
   inpText.style.backgroundColor = "gray"
@@ -18,8 +21,8 @@
   //   alert("Preencha o campo")
   // }
   //OU
-  function validateInput(event){
-    if(event.target.value == ""){
+  function validateInput(event) {
+    if (event.target.value == "") {
       return alert("Preencha o campo")
     }
   }
@@ -31,23 +34,56 @@
   txtArea.addEventListener("blur", validateInput)
 
   //Contando a quantidade de caracteres digitados
-  function countArea(event){
+  function countArea(event) {
     lengthArea.innerHTML = event.target.textLength
 
     //se chegar a 30 caracteres o textArea é desabilitado
-    if(event.target.textLength >= 30){
+    if (event.target.textLength >= 30) {
       txtArea.setAttribute("disabled", "disabled")
     }
   }
   txtArea.addEventListener("keydown", countArea)
 
 
-
   //CHECKBOX
-  console.log(check.checked)
-  if(check.checked == false){
-    alert("Acdeite")
+  function checar(event) {
+    if (event.target.checked) {
+      alert("Checado")
+    }
+  }
+  check.addEventListener("click", checar)
+
+
+  //RADIO
+  function radioTest(event) {
+    if (event.target.value == "Male") {
+      alert("Masculino")
+    } else {
+      alert("Feminino")
+    }
+  }
+  //deve usar o "for" por existirem 2 "radios" de mesmo nome
+  for (let i = 0; i < radio.length; i++) {
+    radio[i].addEventListener("click", radioTest)
   }
 
+
+  //SELECT
+  function selValidate(event) {
+    if (event.target.selectedIndex == 0) {
+      alert("Selecione uma opção")
+    } else {
+      alert(`Opção selecionada ${event.target.value}`)
+    }
+  }
+  sel.addEventListener("change", selValidate)
+
+
+  //BUTTON
+  function submitForm(event){
+    event.preventDefault()
+    console.log("Botão clicado")
+  }
+  btn.addEventListener("click", submitForm)
 
 })(window, document)
