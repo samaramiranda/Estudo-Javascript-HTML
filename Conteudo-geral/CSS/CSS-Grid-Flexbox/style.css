@@ -1,0 +1,64 @@
+/* Tirando o estilo padrão dos elementos */
+body, ul, li, p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Deixando as imgs responsivas */
+img {
+  max-width: 100%; /* Imagem ficam no máximo 100% do tamanho do container dela */
+  display: block;
+}
+
+
+/* Estilizando elementos */
+.header {
+  background: #1d1e20;
+  display: flex;
+  flex-wrap: wrap; /* Alinha um item do lado do outro */
+  justify-content: space-between; /* Para quando a tela for pequena alinhar os itens um embaixo do outro */
+  align-items: center; /* Cria um espaço entre os itens */
+  padding: 20px; /* Alinha os itens na mesma altura no centro */
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+/* Aumentando a área de click das opções do menu */
+.menu li a {
+  display: block; /* O item é renderizado com um bloco */
+  padding: 10px;
+  background: rgb(78, 78, 78);
+}
+
+
+/* CSS FLEXBOX 1 */
+.flex {
+  display: flex;
+  flex-wrap: wrap; /* indica que pode quebrar de linha (depende do tamanho min no .flex > div)*/
+  max-width: 800px; /* limitando o tamanho do container */
+  margin: 0 auto; /* Para alinhar ao centro quando ultrapassar 800px */
+}
+
+.flex > div { /* Referenciando a div dentro da classe "flex" */
+  flex: 1 1 200px; /* a imagem pode se expandir ou ficar menor e deve ter no min 200x */
+  margin: 10px;
+}
