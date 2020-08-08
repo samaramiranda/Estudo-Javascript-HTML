@@ -7,6 +7,10 @@ body, ul, li, p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  margin-bottom: 100px;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -27,11 +31,11 @@ img {
 /* Estilizando elementos */
 .header {
   background: #1d1e20;
-  display: flex;
-  flex-wrap: wrap; /* Alinha um item do lado do outro */
-  justify-content: space-between; /* Para quando a tela for pequena alinhar os itens um embaixo do outro */
-  align-items: center; /* Cria um espaço entre os itens */
-  padding: 20px; /* Alinha os itens na mesma altura no centro */
+  display: flex; /* Alinha um item do lado do outro */
+  flex-wrap: wrap; /* Para quando a tela for pequena alinhar os itens um embaixo do outro */
+  justify-content: space-between; /* Cria um espaço entre os itens */
+  align-items: center; /* Alinha os itens na mesma altura no centro */
+  padding: 20px; 
 }
 
 .menu {
@@ -62,3 +66,111 @@ img {
   flex: 1 1 200px; /* a imagem pode se expandir ou ficar menor e deve ter no min 200x */
   margin: 10px;
 }
+
+
+/* CSS GRID 1 */
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Definindo a quantidade de colunas do grid */
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+  grid-gap: 20px; /* Definindo espaçamento entre os itens */
+}
+
+.grid1 > div:nth-child(n + 4) { /* Selecionando a partir da 4ª div dentro da classe "grid1" */
+  display: grid; /* Dividindo cada div em um grid */
+  grid-template-columns: 1fr 1fr; /* Dividindo esse grid em duas colunas */
+  grid-gap: 10px;
+  align-items: center;
+} 
+
+.grid1 > div.anuncio {
+  grid-column: 1; /* Posicionando o anuncio na primeira coluna */
+  grid-row: 2 / 5; /* Definindo que o anuncio vai ocupar da linha 2 até a linha 5 */
+  display: block; /* Para o anuncio voltar ao tamanho normal */
+}
+
+/* Definindo responsividade */
+@media (max-width: 600px) {/* Aplica o estilo quando estiver abaixo de 600px */
+  .grid1 {
+    grid-template-columns: 1fr 1fr; /* Diminui a quantidade de colunas */
+  }
+
+  .grid1 > div:nth-child(n + 4) {
+    display: block; /* Display block retira as propriedades do display grid e as imagens voltam ao tamanho normal */
+  }
+
+  .grid1 > div.anuncio { /* Para o anuncio deixar de ocupar da linha 2 a 5 */
+    grid-column: auto;
+    grid-row: auto;
+    order: -1; /* Colocando o anuncio como primeiro item */
+  }
+}
+
+
+/* CSS GRID 2 */
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px; /* Primeira coluna expande ou diminuí, mas a coluna 2 é fixa */
+    grid-gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .sidebar > div { /* Definindo margem para os itens da lateral */
+    margin-bottom: 10px;
+  }
+
+  /* Definindo responsividade */
+  @media (max-width: 600px){
+    .grid2 {
+      grid-template-columns: 1fr; /* Transformando em apenas uma coluna */
+    }
+
+    .sidebar {
+      display: flex; /* Alinhando os itens um ao lado do outro */
+      overflow: scroll; /* Criando scroll para rolagem dos itens */
+    }
+
+    .sidebar > div { /* Estilizando cada div dentro de .sidebar */
+      flex: 1 0 200px; /* A div não diminui e tem no mínimo 200px */
+      margin: 0 10px;
+    }
+  }
+
+
+  /* CSS GRID 3 */
+  .grid3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+  }
+
+  .grid3-item:nth-child(1) {  /* Selecionando a 1ª div dentro da classe "grid1" */
+    grid-row: 1 / 3;
+  }
+
+  .grid3-item { /* Definindo display grid para div de cada item */
+    display: grid;
+  }
+
+  .grid3-item img {
+    grid-column: 1; /* Definindo uma coluna única para a img de cada div */
+    grid-row: 1 / 3; /* Dividindo em linha e definindo que a img ocupa da 1 a 3 */
+    align-self: end; /* Alinhando a img ao fim da linha */
+  }
+
+  .grid3-item p {
+    background: rgba(0, 0, 0, 0.6); /* Colocando fundo transparente */
+    padding: 10px;
+    color: white;
+    grid-column: 1;/* Definindo uma coluna única para a legenda de cada div */
+    grid-row: 2; /* Definindo que a legenda começa apenas na linha 2 */
+    align-self: end; /* Alinhando a legenda ao fim da linha */
+  }
+/*  */
