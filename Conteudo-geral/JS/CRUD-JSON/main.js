@@ -13,8 +13,8 @@ console.log(objDados)
 
 
 //ESCREVENDO DADOS
-const id = Math.random().toString(32).substr(2,9)
-objDados.push({"id": id, "nome": "João", "idade": 34})
+const id = Math.random().toString(32).substr(2, 9)
+objDados.push({ "id": id, "nome": "João", "idade": 34 })
 fs.writeFileSync("./database.json", JSON.stringify(objDados))
 
 console.log("\n\n", objDados)
@@ -23,7 +23,7 @@ console.log("\n\n", objDados)
 // EDITANDO DADOS
 const selectDado = objDados.findIndex((item) => item.id == "fe7hn8efr")
 
-const {id: cId, nome: cNome, idade: cIdade} = objDados[selectDado]
+const { id: cId, nome: cNome, idade: cIdade } = objDados[selectDado]
 
 const newObject = {
   id: cId,
