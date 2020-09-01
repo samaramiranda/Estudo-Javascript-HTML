@@ -11,15 +11,15 @@ function debounceEvent(fn, wait = 1000, time) {
 
     time = setTimeout(() => {
       //função de "HandleKeyUp" é executada utilizando o "event" passado por argumento
-      fn.apply(this, arguments) 
+      fn.apply(this, arguments)
     }, wait)
   }
 }
 
 function handleKeyUp(event) {
-    filterUsers(event.target.value)
+  filterUsers(event.target.value)
     .then(users => console.log(users.map(user => user.name)))
-  }
+}
 
 //debounceEvent é executa quando abre a página, então ela se recebe o seu próprio retorno e se torna a função interna
 document.querySelector("input").addEventListener("keyup", debounceEvent(handleKeyUp))
