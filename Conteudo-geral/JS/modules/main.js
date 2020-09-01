@@ -1,4 +1,4 @@
-import Hero, {printHeroName as heroName, printHeroPower as heroPower} from "./superHero.class.js"
+import Hero, { printHeroName as heroName, printHeroPower as heroPower } from "./superHero.class.js"
 
 const hero = new Hero("Superman", "Visão de raio-x")
 console.log(hero.name)
