@@ -1,0 +1,26 @@
+input {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 8px;
+  border: 2px solid green;
+  width: 180px;
+}
+
+button {
+  padding: 10px;
+  margin: 20px;
+  width: 40px;
+  border-radius: 8px;
+  font-weight: bolder;
+  background-color: green;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(4, 192, 4);
+  cursor: pointer;
+}
+
+h1 {
+  margin-left: 235px;
+}
