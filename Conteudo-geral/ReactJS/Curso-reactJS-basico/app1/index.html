@@ -17,16 +17,32 @@
 
     <script type="text/babel">
 
-      function MeuComponente() {
-        var nome = "samara"
-        var sobrenome = "miranda"
+      class CompA extends React.Component {
+        render() {
+          return (
+            <h3>Comp A</h3>
+          )
+        }
+      }
 
-        return (
-          <div>
-            <h1>Olá React</h1>
-            <p>Meu nome é {nome} {sobrenome}</p>
-          </div>
-        )
+      class CompB extends React.Component {
+        render() {
+          return (
+            <h3>Comp B</h3>
+          )
+        }
+      }
+
+      class MeuComponente extends React.Component {
+        render() {
+          return (
+            <div>
+              <CompA />
+              <hr />
+              <CompB />
+            </div>
+          )
+        }
       }
 
       const root = document.getElementById("root")
