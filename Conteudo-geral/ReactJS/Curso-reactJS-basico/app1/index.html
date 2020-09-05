@@ -30,40 +30,34 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
+    
+      function Tempo() {
+        const conteudo = (
+          <div>
+            <h3>Tempo atual</h3>
+            <p>Estamos na seguinte hora: {new Date().toLocaleTimeString()}</p>
+          </div>
+        )
 
-      class CompA extends React.Component {
-        render() {
-          return (
-            <div className="red">
-              <p>Texto do CompA</p>
-            </div>
-          )
-        }
+        ReactDOM.render(
+          conteudo, document.getElementById("root")
+        )
       }
 
-      class CompB extends React.Component {
-        render() {
-          return (
-            <div className="green">
-            <p>Texto do CompB</p>
-            </div>
-          )
-        }
-      }
+      setInterval(Tempo, 1000);
 
-      class App extends React.Component {
-        render(){
-          return (
-            <div>
-              <CompA />
-              <CompB />
-            </div>
-          )
-        }
-      }
+      // function Tempo() {
+      //   return (
+      //     <div>
+      //       <h3>Tempo atual</h3>
+      //       <p>Estamos na seguinte hora: {new Date().toLocaleTimeString()}</p>
+      //     </div>
+      //   )
+      // }
 
-      const root = document.getElementById("root")
-      ReactDOM.render(<App />, root)
+      // setInterval(() => {
+      //   (ReactDOM.render(<Tempo />, document.getElementById("root")))
+      // }, 1000);
     </script>
   </div>
 
