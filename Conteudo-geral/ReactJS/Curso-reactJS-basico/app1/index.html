@@ -17,26 +17,19 @@
 
     <script type="text/babel">
 
-      function CompA(props) {
-        return (
-          <div>
-            <p>Olá, {props.nome} {props.sobrenome}</p>
-          </div>
-        )
-      }
-
-      class CompB extends React.Component {
+      class Adicao extends React.Component {
         render() {
           return (
             <div>
-              <p>Olá, {this.props.nome} {this.props.sobrenome}!!</p>
+              <p>O resultado de {this.props.a} + {this.props.b} = {this.props.a + this.props.b}</p>
+              <p>O nome é: {this.props.nome}</p>
             </div>
           )
         }
       }
 
       const root = document.getElementById("root")
-      ReactDOM.render(<CompB nome="Samara" sobrenome="Miranda" />, root)
+      ReactDOM.render(<Adicao a={10} b={20} nome={"Samara"} />, root)
     </script>
   </div>
 
