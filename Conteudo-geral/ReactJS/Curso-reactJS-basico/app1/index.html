@@ -16,34 +16,28 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-    
-      function Tempo() {
-        const conteudo = (
-          <div>
-            <h3>Tempo atual</h3>
-            <p>Estamos na seguinte hora: {new Date().toLocaleTimeString()}</p>
-          </div>
-        )
 
-        ReactDOM.render(
-          conteudo, document.getElementById("root")
-        )
+      class App extends React.Component {
+        render() {
+          const estilo = {
+            color: "blue",
+            backgroundColor: "gray",
+            padding: "20px"
+          }
+
+          return (
+            <div>
+              <p style={{ color: "red", backgroundColor: "yellow", padding: "20px" }}>Texto do componente usando estilo inline</p>
+              <p style={estilo}>Texto do componente usando constante para o estilo</p>
+            </div>
+          )
+        }
       }
 
-      setInterval(Tempo, 1000);
+      ReactDOM.render(
+        <App />, document.getElementById("root")
+      )
 
-      // function Tempo() {
-      //   return (
-      //     <div>
-      //       <h3>Tempo atual</h3>
-      //       <p>Estamos na seguinte hora: {new Date().toLocaleTimeString()}</p>
-      //     </div>
-      //   )
-      // }
-
-      // setInterval(() => {
-      //   (ReactDOM.render(<Tempo />, document.getElementById("root")))
-      // }, 1000);
     </script>
   </div>
 
