@@ -15,28 +15,44 @@
 
   <script type="text/babel">
 
-    class App extends React.Component {
+    //Componente que contem os nomes e botões
+    class CompNome extends React.Component {
       constructor(props) {
         super(props)
 
+        //Pegando o nome passado na props para definir no state
         this.state = {
-          nome: "Samara"
+          nome: this.props.nomeInicial
         }
 
-        //Referenciando a função do botão ao construtor
-        this.handleClick = this.handleClick.bind(this)
+        this.alterarNome = this.alterarNome.bind(this)
       }
 
-      //Criando função do click do botão
-      handleClick() {
-        this.setState({ nome: "Joana" })
+      alterarNome() {
+        //alterando o nome do state pela definição da outra props de nome
+        this.setState({ nome: this.props.nomeFinal })
       }
 
       render() {
         return (
           <div>
             <p>Nome: {this.state.nome}</p>
-            <button onClick={this.handleClick}>Clique</button>
+            <button onClick={this.alterarNome}>Alterar</button>
+          </div>
+        )
+      }
+    }
+
+    //Componente geral
+    class App extends React.Component {
+      render() {
+        return (
+          <div>
+            <h1>Exercício</h1>
+            <hr />
+            <CompNome nomeInicial="João" nomeFinal="Ribeiro" />
+            <CompNome nomeInicial="Maria" nomeFinal="Eliza" />
+            <CompNome nomeInicial="Ana" nomeFinal="Carolina" />
           </div>
         )
       }
