@@ -15,48 +15,35 @@
 
   <script type="text/babel">
 
-    class Identificacao extends React.Component {
-      constructor() {
-        super()
+    class App extends React.Component {
+      constructor(props) {
+        super(props)
 
         this.state = {
-          nome: "Samara",
-          idade: 21
+          nome: "Samara"
         }
+
+        //Referenciando a função do botão ao construtor
+        this.handleClick = this.handleClick.bind(this)
+      }
+
+      //Criando função do click do botão
+      handleClick() {
+        this.setState({ nome: "Joana" })
       }
 
       render() {
-
-        //Alterando o valor do state no componente pai ele também é alterado nas props do componentes filhos
-        this.state.nome = "Joana"
-
         return (
           <div>
-            <Nome nome={this.state.nome} />
-            <Idade idade={this.state.idade} />
+            <p>Nome: {this.state.nome}</p>
+            <button onClick={this.handleClick}>Clique</button>
           </div>
         )
       }
     }
 
-    class Nome extends React.Component {
-      render() {
-        return (
-          <p>Nome: {this.props.nome}</p>
-        )
-      }
-    }
-
-    class Idade extends React.Component {
-      render() {
-        return (
-          <p>Idade: {this.props.idade}</p>
-        )
-      }
-    }
-
     ReactDOM.render(
-      <Identificacao />, document.getElementById("root")
+      <App />, document.getElementById("root")
     )
 
   </script>
