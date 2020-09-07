@@ -15,33 +15,48 @@
 
   <script type="text/babel">
 
-    class App extends React.Component {
+    class Identificacao extends React.Component {
       constructor() {
         super()
 
         this.state = {
-          nome: "Samara"
+          nome: "Samara",
+          idade: 21
         }
       }
 
       render() {
-        // É possível alterar o valor do state após ja ter sido definido
-        this.state.nome = "Joana"
 
-        //Não é possível alterar o valor da propriedade após definida
-        // this.props.idade = "25"
+        //Alterando o valor do state no componente pai ele também é alterado nas props do componentes filhos
+        this.state.nome = "Joana"
 
         return (
           <div>
-            <p>Nome: {this.state.nome}</p>
-            <p>Idade: {this.props.idade}</p>
+            <Nome nome={this.state.nome} />
+            <Idade idade={this.state.idade} />
           </div>
         )
       }
     }
 
+    class Nome extends React.Component {
+      render() {
+        return (
+          <p>Nome: {this.props.nome}</p>
+        )
+      }
+    }
+
+    class Idade extends React.Component {
+      render() {
+        return (
+          <p>Idade: {this.props.idade}</p>
+        )
+      }
+    }
+
     ReactDOM.render(
-      <App idade="22" />, document.getElementById("root")
+      <Identificacao />, document.getElementById("root")
     )
 
   </script>
