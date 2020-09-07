@@ -10,7 +10,6 @@
 <body>
 
   <div id="root">
-
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -18,24 +17,27 @@
     <script type="text/babel">
 
       class App extends React.Component {
-        render() {
-          const estilo = {
-            color: "blue",
-            backgroundColor: "gray",
-            padding: "20px"
-          }
+        constructor() {
+          super()
 
+          this.state = {
+            nome: "samara",
+            idade: 23
+          }
+        }
+
+        render() {
           return (
             <div>
-              <p style={{ color: "red", backgroundColor: "yellow", padding: "20px" }}>Texto do componente usando estilo inline</p>
-              <p style={estilo}>Texto do componente usando constante para o estilo</p>
+              <p>Nome: {this.state.nome} {this.props.sobrenome}</p>
+              <p>Idade: {this.state.idade}</p>
             </div>
           )
         }
       }
 
       ReactDOM.render(
-        <App />, document.getElementById("root")
+        <App sobrenome="miranda" />, document.getElementById("root")
       )
 
     </script>
