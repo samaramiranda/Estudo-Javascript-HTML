@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import App from "./calculadora/App"
+import App from "./useState/App"
 
 ReactDOM.render(
   <App></App>,
