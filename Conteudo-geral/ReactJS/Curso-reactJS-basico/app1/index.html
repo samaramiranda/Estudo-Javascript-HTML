@@ -15,25 +15,15 @@
 
   <script type="text/babel">
 
-    class App extends React. Component {
-      constructor(){
-        super()
+    class App extends React.Component {
 
-        this.state = {
-          nome: "Samara"
-        }
-      }
-
-      metodo = () => {
-        this.setState({nome: "Joana"})
+      metodo = (teste) => {
+        console.log(teste)
       }
 
       render(){
         return (
-          <div>
-          <p>Nome: {this.state.nome}</p>
-          <button onClick={this.metodo}>Alterar</button>
-          </div>
+          <button onClick={() => this.metodo("Olá")}>Click</button>
         )
       }
     }
