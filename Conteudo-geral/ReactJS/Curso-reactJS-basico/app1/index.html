@@ -17,25 +17,44 @@
 
     class App extends React.Component {
       render() {
-        const arr = [
+        const arrNoticias = [
           {
-            nome: "samara",
-            profissao: "Desenvolvedora"
+            titulo: "Primeira notícia",
+            conteudo: "Texto da notícia 1",
+            autor: "Autor1"
           },
           {
-            nome: "Samuel",
-            profissao: "Engenheiro"
+            titulo: "Segunda notícia",
+            conteudo: "Texto da notícia 2",
+            autor: "Autor2"
           },
           {
-            nome: "Joao",
-            profissao: "Jogador"
+            titulo: "Terceira notícia",
+            conteudo: "Texto da notícia 3",
+            autor: "Autor3"
           }
         ]
-        const final = arr.map(item => <h3 key={item.nome}>{item.nome} é {item.profissao}</h3>)
+
+        const arrNoticiasFinal = arrNoticias.map(item => <Noticia key={item.titulo} newNoticia={item} />)
 
         return (
           <div>
-            {final}
+            <h1>Notícias</h1>
+            <hr />
+            {arrNoticiasFinal}
+          </div>
+        )
+      }
+    }
+
+    class Noticia extends React.Component {
+      render() {
+        return (
+          <div>
+            <h2>{this.props.newNoticia.titulo}</h2>
+            <p>{this.props.newNoticia.conteudo}</p>
+            <small><i>{this.props.newNoticia.autor}</i></small>
+            <hr />
           </div>
         )
       }
