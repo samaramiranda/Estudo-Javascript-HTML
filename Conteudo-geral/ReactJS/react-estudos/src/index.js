@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import App from "./renderizacao-listas-map/App"
+import App from "./renderizacao-componentes-map/App"
 
 ReactDOM.render(
   <App></App>,
