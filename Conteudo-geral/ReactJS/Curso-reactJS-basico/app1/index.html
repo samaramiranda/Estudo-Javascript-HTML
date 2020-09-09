@@ -16,40 +16,28 @@
   <script type="text/babel">
 
     class App extends React.Component {
-      constructor() {
-        super()
-
-        this.state = {
-          tempoBom: false
-        }
-      }
-
       render() {
-        //** 1- IF - ELSE **
-        // if (this.state.tempoBom) {
-        //   return <p>Tempo está bom</p>
-        // }
-        // return <p>Tempo está ruim</p>
+        const arr = [
+          {
+            nome: "samara",
+            profissao: "Desenvolvedora"
+          },
+          {
+            nome: "Samuel",
+            profissao: "Engenheiro"
+          },
+          {
+            nome: "Joao",
+            profissao: "Jogador"
+          }
+        ]
+        const final = arr.map(item => <h3 key={item.nome}>{item.nome} é {item.profissao}</h3>)
 
-        //** 2- VARIÁVEIS **
-        // let texto
-        // if (this.state.tempoBom) {
-        //   texto = <p>Tempo está bom</p>
-        // } else {
-        //   texto = <p>Tempo está ruim</p>
-        // }
-        // return texto
-
-        //** 3- CONDIÇÃO TERNÁRIA **
-        // return (
-        //   this.state.tempoBom
-        //     ? <p>Tempo está bom</p>
-        //     : <p>Tempo está ruim</p>
-        // )
-
-        //** 4- SHORT CIRCUIT **
-        // return this.state.tempoBom && <p>Tempo está bom</p> 
-        // return this.state.tempoBom && <p>Tempo está bom</p> || <p>Tempo está ruim</p>
+        return (
+          <div>
+            {final}
+          </div>
+        )
       }
     }
 
