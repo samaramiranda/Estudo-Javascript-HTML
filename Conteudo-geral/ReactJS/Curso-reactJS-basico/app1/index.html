@@ -16,31 +16,21 @@
   <script type="text/babel">
 
     class App extends React.Component {
-      metodo() {
-        console.log("Olá componente pai")
-      }
-
-      metodo2() {
-        console.log("Olá componente 2 pai")
+      metodo(texto) {
+        console.log(texto)
       }
 
       render() {
         return (
-          <div>
-            <p>Texto comp pai</p>
-            <CompA metodo={this.metodo} met2={this.metodo2} />
-          </div>
+          <Child evento={this.metodo} />
         )
       }
     }
 
-    class CompA extends React.Component {
+    class Child extends React.Component {
       render() {
         return (
-          <div>
-            <button onClick={this.props.metodo}>Click</button>
-            <button onClick={this.props.met2}>Click 2</button>
-          </div>
+          <button onClick={() => { this.props.evento("Olá") }}>Click</button>
         )
       }
     }
