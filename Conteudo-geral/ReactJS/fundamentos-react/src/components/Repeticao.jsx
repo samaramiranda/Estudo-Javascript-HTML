@@ -8,7 +8,7 @@ export default props => {
     return produtos.map(prod => {
       return <li key={prod.id}>
         {prod.id} - {prod.nome} - R${prod.preco}
-        </li>
+      </li>
     })
   }
 
