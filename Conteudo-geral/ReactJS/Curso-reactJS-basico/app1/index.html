@@ -17,44 +17,34 @@
 
     class App extends React.Component {
       render() {
-        const arrNoticias = [
+        const nomes = [
           {
-            titulo: "Primeira notícia",
-            conteudo: "Texto da notícia 1",
-            autor: "Autor1"
+            id: 1,
+            nome: "João",
+            idade: 45
           },
           {
-            titulo: "Segunda notícia",
-            conteudo: "Texto da notícia 2",
-            autor: "Autor2"
-          },
-          {
-            titulo: "Terceira notícia",
-            conteudo: "Texto da notícia 3",
-            autor: "Autor3"
+            id: 2,
+            nome: "Maria",
+            idade: 22
           }
         ]
-
-        const arrNoticiasFinal = arrNoticias.map(item => <Noticia key={item.titulo} newNoticia={item} />)
+        const nomesFinal = nomes.map(item => <MostrarSocio key={item.id} socio={item} />)
 
         return (
           <div>
-            <h1>Notícias</h1>
-            <hr />
-            {arrNoticiasFinal}
+            {nomesFinal}
           </div>
         )
       }
     }
 
-    class Noticia extends React.Component {
+    class MostrarSocio extends React.Component {
       render() {
         return (
           <div>
-            <h2>{this.props.newNoticia.titulo}</h2>
-            <p>{this.props.newNoticia.conteudo}</p>
-            <small><i>{this.props.newNoticia.autor}</i></small>
-            <hr />
+            <p>Nome: {this.props.socio.nome}</p>
+            <p>Idade: {this.props.socio.idade}</p>
           </div>
         )
       }
