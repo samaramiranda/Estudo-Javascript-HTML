@@ -17,41 +17,21 @@
 
     class App extends React.Component {
       render() {
-        const nomes = [
-          {
-            id: 1,
-            nome: "João",
-            idade: 45
-          },
-          {
-            id: 2,
-            nome: "Maria",
-            idade: 22
-          }
-        ]
-        const nomesFinal = nomes.map(item => <MostrarSocio key={item.id} socio={item} />)
+
+        const nomes = ["joao", "ana", "maria"]
+        const novosNomes = nomes.map(item => <h3>{item}</h3>)
 
         return (
           <div>
-            {nomesFinal}
-          </div>
-        )
-      }
-    }
-
-    class MostrarSocio extends React.Component {
-      render() {
-        return (
-          <div>
-            <p>Nome: {this.props.socio.nome}</p>
-            <p>Idade: {this.props.socio.idade}</p>
+            {novosNomes}
           </div>
         )
       }
     }
 
     ReactDOM.render(
-      <App />, document.getElementById("root")
+      <App />,
+      document.getElementById("root")
     )
 
   </script>
