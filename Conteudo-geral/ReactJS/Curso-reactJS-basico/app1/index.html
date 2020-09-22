@@ -18,8 +18,8 @@
     class App extends React.Component {
       render() {
 
-        const nomes = ["joao", "ana", "maria"]
-        const novosNomes = nomes.map(item => <h3>{item}</h3>)
+        const nomes = ["joao", "ana", "maria", "ana"]
+        const novosNomes = nomes.map((item, index) => <h3 key={index}>{index} - {item}</h3>)
 
         return (
           <div>
