@@ -17,9 +17,24 @@
   <script type="text/babel">
 
     class App extends React.Component {
+      constructor() {
+        super()
+
+        this.state = {
+          nome: "Samara"
+        }
+      }
+
+      alterarNome = (event) => {
+        this.setState({ nome: event.target.value })
+      }
+
       render() {
         return (
-          <p style={{color: "red", fontSize: "34px"}}>teste</p>
+          <div>
+            <input type="text" value={this.state.nome} onChange={this.alterarNome} />
+            <p>Valor: {this.state.nome}</p>
+          </div>
         )
       }
     }
