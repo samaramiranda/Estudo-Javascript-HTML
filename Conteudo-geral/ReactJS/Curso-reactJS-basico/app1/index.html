@@ -6,16 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>React Básico</title>
 
-  <style>
-    .cor-vermelho {
-      color: red
-    }
-
-    .tamanho {
-      font-size: 2rem;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -27,21 +17,15 @@
   <script type="text/babel">
 
     class App extends React.Component {
-      constructor(props) {
-        super(props)
-      }
-
       render() {
-        let cor = this.props.cor ? "cor-vermelho" : ""
-        let tamanho = this.props.tamanho ? "tamanho" : ""
         return (
-          <p className={`${cor} ${tamanho}`}>teste</p>
+          <p style={{color: "red", fontSize: "34px"}}>teste</p>
         )
       }
     }
 
     ReactDOM.render(
-      <App cor={false} tamanho={true}/>,
+      <App />,
       document.getElementById("root")
     )
 
