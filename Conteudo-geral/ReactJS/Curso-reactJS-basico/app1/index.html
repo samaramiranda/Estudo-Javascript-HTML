@@ -17,23 +17,23 @@
   <script type="text/babel">
 
     class App extends React.Component {
-      constructor() {
+      constructor(){
         super()
 
         this.state = {
-          nome: "Samara"
+          texto: "Esse é um texto."
         }
       }
 
-      alterarNome = (event) => {
-        this.setState({ nome: event.target.value })
+      alterarTexto = (event) => {
+        this.setState({texto: event.target.value})
       }
 
-      render() {
-        return (
+      render(){
+        return(
           <div>
-            <input type="text" value={this.state.nome} onChange={this.alterarNome} />
-            <p>Valor: {this.state.nome}</p>
+            <textarea cols="30" rows="10" value={this.state.texto} onChange={this.alterarTexto}></textarea>
+            <p>{this.state.texto}</p>
           </div>
         )
       }
