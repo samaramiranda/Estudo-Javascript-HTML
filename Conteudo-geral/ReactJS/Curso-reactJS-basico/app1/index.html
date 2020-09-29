@@ -21,19 +21,24 @@
         super()
 
         this.state = {
-          texto: "Esse é um texto."
+          item: "item3"
         }
       }
 
-      alterarTexto = (event) => {
-        this.setState({texto: event.target.value})
+      alterarItem = event => {
+        this.setState({item: event.target.value})
       }
 
       render(){
         return(
           <div>
-            <textarea cols="30" rows="10" value={this.state.texto} onChange={this.alterarTexto}></textarea>
-            <p>{this.state.texto}</p>
+            <select value={this.state.item} onChange={this.alterarItem}>
+              <option value="item1">Item 1</option>
+              <option value="item2">Item 2</option>
+              <option value="item3">Item 3</option>
+            </select>
+
+            <p>Item selecionado: {this.state.item}</p>
           </div>
         )
       }
