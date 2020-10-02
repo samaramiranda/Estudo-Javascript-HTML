@@ -19,35 +19,29 @@
     class App extends React.Component {
       constructor() {
         super()
-
         this.state = {
-          username: "",
-          password: ""
+          nome: "Samara"
         }
+        console.log("Constructor")
       }
 
-      alterarUsername = event => {
-        this.setState({ username: event.target.value })
+      componentDidMount() {
+        console.log("Montado")
       }
 
-      alterarPassword = event => {
-        this.setState({ password: event.target.value })
-      }
-
-      submeterForm = event => {
-        event.preventDefault()
-        console.log("Username: " + this.state.username)
-        console.log("Password: " + this.state.password)
+      alterar = () => {
+        this.setState({ nome: "Miranda" })
       }
 
       render() {
+        console.log("Render")
         return (
-          <form onSubmit={this.submeterForm}>
-            <input type="text" value={this.state.username} onChange={this.alterarUsername} placeholder="Username" />
-            <input type="password" value={this.state.password} onChange={this.alterarPassword} placeholder="Password" />
-            <br />
-            <input type="submit" value="Entrar" />
-          </form>
+          <div>
+            Olá {this.state.nome}
+            <div>
+              <button onClick={this.alterar}>Alterar</button>
+            </div>
+          </div>
         )
       }
     }
