@@ -1,12 +1,18 @@
 import React from 'react';
-import Identificacao from './componentes/Identificacao';
+import Identificacao from "./components/Identificacao"
 
 class App extends React.Component {
+
+  state = {
+    nome: "Samara",
+    sobrenome: "Miranda"
+  }
+
   render(){
     return(
       <div>
         <h3>Componente principal</h3>
-        <Identificacao></Identificacao>
+        <Identificacao nome={this.state.nome} sobrenome={this.state.sobrenome}></Identificacao>
       </div>
     )
   }
