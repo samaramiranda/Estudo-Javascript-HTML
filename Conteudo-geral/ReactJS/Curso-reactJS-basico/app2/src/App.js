@@ -8,8 +8,8 @@ class App extends React.Component {
     sobrenome: "Miranda"
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <h3>Componente principal</h3>
         <Identificacao nome={this.state.nome} sobrenome={this.state.sobrenome}></Identificacao>
