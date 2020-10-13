@@ -3,20 +3,20 @@ import Child from "./components/Child"
 
 class App extends React.Component {
   state = {
-    nome: "Samara"
+    nome: "Ana"
   }
 
-  alterar = () => {
-    this.setState({ nome: "Miranda" })
+  alterar = (novoNome) => {
+    this.setState({ nome: novoNome })
   }
 
   render() {
     return (
       <div>
         <h3>Parent</h3>
-        <button onClick={this.alterar}>Alterar</button>
+        <p>Nome: {this.state.nome}</p>
         <hr />
-        <Child nome={this.state.nome}></Child>
+        <Child funcaoAlterar={this.alterar}></Child>
       </div>
     )
   }
