@@ -6,8 +6,8 @@ class App extends React.Component {
     nome: "Ana"
   }
 
-  alterar = (novoNome) => {
-    this.setState({ nome: novoNome })
+  alterar = () => {
+    this.setState({ nome: "Miranda" })
   }
 
   render() {
