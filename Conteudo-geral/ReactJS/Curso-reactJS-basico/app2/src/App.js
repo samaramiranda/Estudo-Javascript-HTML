@@ -1,25 +1,14 @@
-import React from 'react';
-import Child from "./components/Child"
+import React, { Component } from "react"
+import "./App.css"
 
-class App extends React.Component {
-  state = {
-    nome: "Ana"
-  }
-
-  alterar = () => {
-    this.setState({ nome: "Miranda" })
-  }
-
+class App extends Component {
   render() {
     return (
       <div>
-        <h3>Parent</h3>
-        <p>Nome: {this.state.nome}</p>
-        <hr />
-        <Child funcaoAlterar={this.alterar}></Child>
+        <h3 className="cor-texto">Texto do React</h3>
       </div>
     )
   }
 }
 
-export default App;
+export default App
