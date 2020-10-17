@@ -6,6 +6,7 @@ class App extends Component {
     return (
       <div>
         <h3 className="cor-texto">Texto do React</h3>
+        <hr className="cor-hr"/>
       </div>
     )
   }
