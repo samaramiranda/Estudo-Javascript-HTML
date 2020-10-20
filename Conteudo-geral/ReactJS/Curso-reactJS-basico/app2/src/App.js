@@ -1,12 +1,17 @@
 import React, { Component } from "react"
-import "./App.css"
+import Navegacao from "./components/Navegacao"
+import Home from "./components/Home"
+import Servicos from "./components/Servicos"
+import Contatos from "./components/Contatos"
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h3 className="cor-texto">Texto do React</h3>
-        <hr className="cor-hr"/>
+        <Navegacao></Navegacao>
+        <Home></Home>
+        <Servicos></Servicos>
+        <Contatos></Contatos>
       </div>
     )
   }
