@@ -1,11 +1,12 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Navegacao = () => {
   return(
     <div>
-      <a href=""> Home</a> |
-      <a href=""> Servicos</a> |
-      <a href=""> Contatos</a> |
+      <Link to="/">Home</Link> |
+      <Link to="/servicos">Servicos</Link> |
+      <Link to="/contatos">Contatos</Link> |
     </div>
   )
 }
